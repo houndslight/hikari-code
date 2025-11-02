@@ -173,4 +173,4 @@ You’re free to use, modify, and share — just credit **Houndslight / Hikari**
 ---
 
 ### 🌸 Created with love by [Houndslight](https://houndslight.online)
-> “From us, to you — harness your empty desires.”
+> “From us, to you.”
