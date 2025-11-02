@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Default light background */
+    --foreground: 222.2 84% 4.9%; /* Default light foreground */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Rose Pine Light */
+    --rosepine-base: 0 0% 98%; /* off-white */
+    --rosepine-surface: 0 0% 96%; /* slightly darker off-white */
+    --rosepine-subtle: 0 0% 94%; /* even darker off-white */
+    --rosepine-text: 222.2 47.4% 11.2%; /* dark text */
+    --rosepine-love: 340 70% 60%; /* soft pink */
+    --rosepine-gold: 39 80% 60%; /* soft yellow */
+    --rosepine-rose: 350 30% 80%; /* light pink */
+    --rosepine-pine: 190 40% 50%; /* light teal */
+    --rosepine-foam: 190 40% 70%; /* lighter teal */
+    --rosepine-iris: 270 40% 70%; /* lavender */
+    --rosepine-highlight-low: 0 0% 95%;
+    --rosepine-highlight-med: 0 0% 90%;
+    --rosepine-highlight-high: 0 0% 85%;
+
+    /* Apply Rose Pine Light to default theme */
+    --background: var(--rosepine-base);
+    --foreground: var(--rosepine-text);
+    --card: var(--rosepine-surface);
+    --card-foreground: var(--rosepine-text);
+    --popover: var(--rosepine-surface);
+    --popover-foreground: var(--rosepine-text);
+    --primary: var(--rosepine-iris); /* Lavender for primary actions */
+    --primary-foreground: var(--rosepine-text);
+    --secondary: var(--rosepine-rose); /* Soft pink for secondary */
+    --secondary-foreground: var(--rosepine-text);
+    --muted: var(--rosepine-subtle);
+    --muted-foreground: var(--rosepine-text);
+    --accent: var(--rosepine-foam);
+    --accent-foreground: var(--rosepine-text);
+    --border: var(--rosepine-subtle);
+    --input: var(--rosepine-subtle);
+    --ring: var(--rosepine-iris);
+  }
+
+  .dark {
+    /* Rose Pine Dark */
+    --rosepine-base: 240 5.9% 10%; /* off-black */
+    --rosepine-surface: 240 5.3% 12%; /* darker off-black */
+    --rosepine-subtle: 240 4.8% 15%; /* even darker off-black */
+    --rosepine-text: 240 4.8% 95.9%; /* light grey/white */
+    --rosepine-love: 340 70% 60%; /* soft pink */
+    --rosepine-gold: 39 80% 60%; /* soft yellow */
+    --rosepine-rose: 350 30% 80%; /* light pink */
+    --rosepine-pine: 190 40% 50%; /* light teal */
+    --rosepine-foam: 190 40% 70%; /* lighter teal */
+    --rosepine-iris: 270 40% 70%; /* lavender */
+    --rosepine-highlight-low: 240 5.3% 12%;
+    --rosepine-highlight-med: 240 4.8% 15%;
+    --rosepine-highlight-high: 240 3.7% 18%;
+
+    /* Apply Rose Pine Dark to dark theme */
+    --background: var(--rosepine-base);
+    --foreground: var(--rosepine-text);
+    --card: var(--rosepine-surface);
+    --card-foreground: var(--rosepine-text);
+    --popover: var(--rosepine-surface);
+    --popover-foreground: var(--rosepine-text);
+    --primary: var(--rosepine-iris); /* Lavender for primary actions */
+    --primary-foreground: var(--rosepine-text);
+    --secondary: var(--rosepine-rose); /* Soft pink for secondary */
+    --secondary-foreground: var(--rosepine-text);
+    --muted: var(--rosepine-subtle);
+    --muted-foreground: var(--rosepine-text);
+    --accent: var(--rosepine-foam);
+    --accent-foreground: var(--rosepine-text);
+    --border: var(--rosepine-subtle);
+    --input: var(--rosepine-subtle);
+    --ring: var(--rosepine-iris);
+
+    --sidebar-background: var(--rosepine-base);
+    --sidebar-foreground: var(--rosepine-text);
+    --sidebar-primary: var(--rosepine-iris);
+    --sidebar-primary-foreground: var(--rosepine-text);
+    --sidebar-accent: var(--rosepine-subtle);
+    --sidebar-accent-foreground: var(--rosepine-text);
+    --sidebar-border: var(--rosepine-subtle);
+    --sidebar-ring: var(--rosepine-iris);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Custom scrollbar for a premium feel */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--rosepine-highlight-low); /* Subtle track color */
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--rosepine-subtle); /* Thumb color */
+    border-radius: 10px;
+    border: 2px solid var(--rosepine-highlight-low); /* Border to make it thinner */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--rosepine-foam); /* Hover effect */
+  }
+
+  .dark .custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--rosepine-highlight-low);
+  }
+
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--rosepine-subtle);
+    border: 2px solid var(--rosepine-highlight-low);
+  }
+
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--rosepine-foam);
+  }
+}
